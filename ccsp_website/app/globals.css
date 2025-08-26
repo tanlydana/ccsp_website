@@ -1,5 +1,9 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@import "swiper/css";
+@import "swiper/css/effect-fade";
+@import "swiper/css/pagination";
+
 
 @custom-variant dark (&:is(.dark *));
 
@@ -125,14 +129,33 @@
   }
 
   .text-gradient-b {
-    @apply bg-gradient-to-b from-[#004282] to-[#027DAC] text-transparent bg-clip-text;
+    @apply bg-gradient-to-b from-white to-[#8B0000] text-transparent bg-clip-text;
   }
 
   .text-gradient-r {
     @apply bg-gradient-to-r from-[#54A7F6] to-[#004282] text-transparent bg-clip-text;
   }
-  
+  .header{
+    @apply max-w-7xl mx-auto px-6 py-12 lg:px-12 ; 
+  }
+  .small-card{
+    @apply inline-flex items-center px-4 py-2 bg-[#B22234]/60 text-white text-sm font-medium rounded-full;
+  }
+  .text-header{
+    @apply text-3xl md:text-4xl font-bold text-white; 
+  }
+  .subtext{
+    @apply max-w-2xl text-xl text-shadow-white leading-relaxed;
+  }
+  .card{
+    @apply rounded-xl shadow-sm  transition-all duration-300 hover:-translate-y-1 p-8 border border-amber-50;  
+  }
+  .label-style{
+    @apply block text-sm font-semibold text-gray-700 mb-2;
+  }
 }
+
+
 
 img {
   user-select: none;
