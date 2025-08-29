@@ -27,7 +27,8 @@ const Hero: React.FC<HeroProps> = ({
 }) => {
   // const t = useTranslations('HomePage');
   return (
-    <div className="container min-h-screen flex flex-col lg:grid lg:grid-cols-2 items-center justify-center gap-8 my-32 md:my-28 lg:my-0">
+    <section className="section-padding">
+    <div className="container flex flex-col lg:grid lg:grid-cols-2 items-center justify-center gap-8">
       {/* Left Content */}
       <div className="space-y-8 mt-12 lg:mt-0">
         <div className="text-header">
@@ -100,8 +101,8 @@ const Hero: React.FC<HeroProps> = ({
           ))}
         </Swiper>
       </div>
-
     </div>
+    </section>
   );
 };
 

@@ -23,7 +23,7 @@ const Nav = () => {
 
   return (
     <div
-      className={`transition-all duration-200 h-[12vh] fixed w-full ${
+      className={`transition-all duration-200 h-[12vh] fixed w-full z-20 ${
         navBg ? "bg-[#0f142ed9] shadow-md" : ""
       }`}
     >
