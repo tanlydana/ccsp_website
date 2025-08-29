@@ -12,7 +12,9 @@ import { ChevronRightIcon } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, EffectFade } from "swiper/modules";
 import { Features, heroSlides, HeroSlide, Feature } from "@/constant/constant";
+import ParticlesHero from "./ParticleBackground";
 // import {useTranslations} from 'next-intl';
+
 
 
 interface HeroProps {
@@ -27,7 +29,7 @@ const Hero: React.FC<HeroProps> = ({
   // const t = useTranslations('HomePage');
   return (
     <div className="container min-h-screen flex flex-col lg:grid lg:grid-cols-2 items-center justify-center gap-8 my-32 md:my-28 lg:my-0">
-
+      <ParticlesHero/>
       {/* Left Content */}
       <div className="space-y-8 mt-12 lg:mt-0">
         <div className="text-header">
