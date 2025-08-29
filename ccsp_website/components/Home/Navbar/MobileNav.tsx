@@ -4,11 +4,13 @@ import React from "react";
 import Link from "next/link";
 import { Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { NavLinks } from "@/constant/constant";
-import { DialogTitle } from "@radix-ui/react-dialog";
+import { NavLinks as LINKS } from "@/constant/constant";
 
+interface Props {
+  currentLang: "en" | "km";
+}
 
-const MobileNav = () => {
+export default function MobileNav({ currentLang }: Props) {
   return (
     <div className="lg:hidden flex items-center">
       <Sheet>
@@ -17,13 +19,11 @@ const MobileNav = () => {
         </SheetTrigger>
 
         <SheetContent side="right" className="w-[280px] p-6 bg-[#0f142ed9] border-none">
-          <DialogTitle className="sr-only mb-10">Sidebar Menu</DialogTitle>
-
           <div className="flex flex-col space-y-4 my-16 text-white">
-            {NavLinks.map((link) => (
+            {LINKS.map((link) => (
               <Link
                 key={link.id}
-                href={link.url}
+                href={`/${currentLang}${link.url}`}
                 className="text-lg font-medium hover:text-[#1E40AF]"
               >
                 {link.label}
@@ -34,6 +34,4 @@ const MobileNav = () => {
       </Sheet>
     </div>
   );
-};
-
-export default MobileNav;
+}
