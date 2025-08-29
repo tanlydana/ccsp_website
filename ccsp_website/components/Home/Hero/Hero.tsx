@@ -1,32 +1,32 @@
 "use client";
 
+import "swiper/css";
+import "swiper/css/effect-fade";
+import "swiper/css/pagination";
 import React from "react";
 import Image from "next/image";
 import Typewriter from "typewriter-effect";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { ChevronRightIcon, Ghost } from "lucide-react";
+import { ChevronRightIcon } from "lucide-react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, EffectFade } from "swiper/modules";
 import { Features, heroSlides, HeroSlide, Feature } from "@/constant/constant";
 import ParticlesHero from "./ParticleBackground";
+// import {useTranslations} from 'next-intl';
 
-// Import Swiper CSS
-import "swiper/css";
-import "swiper/css/effect-fade";
-import "swiper/css/pagination";
 
-// ------------------- Props -------------------
+
 interface HeroProps {
   slides?: HeroSlide[];
   features?: Feature[];
 }
 
-// ------------------- Component -------------------
 const Hero: React.FC<HeroProps> = ({
   slides = heroSlides,
   features = Features,
 }) => {
+  // const t = useTranslations('HomePage');
   return (
     <div className="container min-h-screen flex flex-col lg:grid lg:grid-cols-2 items-center justify-center gap-8 my-32 md:my-28 lg:my-0">
       <ParticlesHero/>
@@ -43,7 +43,6 @@ const Hero: React.FC<HeroProps> = ({
             }}
           />
         </div>
-
         <p className="subtext">
           We equip rural students with essential skills and confidence through
           comprehensive programs in STEM, technology, English, and critical thinking.
